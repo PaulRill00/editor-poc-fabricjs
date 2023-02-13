@@ -1,9 +1,45 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8" />
-    </head>
-    <body>
-        <script src="src/index.ts"></script>
-    </body>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/fabric"></script>
+    <meta charset="utf-8" />
+    <title>FabricJS PoC</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #b7b7b7;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      canvas#canvas {
+        background-color: white;
+      }
+      .konvajs-content {
+        background-color: #fff;
+      }
+      .controls {
+        background-color: grey;
+      }
+    </style>
+    <link rel="stylesheet" src="src/style.css"></link>
+  </head>
+  <body>
+    <div id="container">
+        <canvas id="canvas" width="420" height="420"></canvas>
+    </div>
+    <div class="controls" style="position: relative; display: block;">
+      <button id="toggle-bounds">toggle visibility bounds</button>
+      <button id="spawn-image">spawn image</button>
+      <button id="save-canvas">save</button>
+    </div>
+    <script src="src/index.ts"></script>
+    <script src="https://unpkg.com/konva@8/konva.min.js"></script>
+  </body>
 </html>
